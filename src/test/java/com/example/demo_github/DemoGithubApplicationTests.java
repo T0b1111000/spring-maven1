@@ -1,13 +1,19 @@
-package com.example.demo_github;
+package com.example;  // Match <groupId>com.example</groupId>
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@SpringBootTest
-class DemoGithubApplicationTests {
+@SpringBootApplication
+@RestController
+public class DemoGithubApplication {  // Nom de classe = artifactId sans tirets
+    public static void main(String[] args) {
+        SpringApplication.run(DemoGithubApplication.class, args);
+    }
 
-	@Test
-	void contextLoads() {
-	}
-
+    @GetMapping("/hello")
+    public String hello() {
+        return "Hello, World!";
+    }
 }
