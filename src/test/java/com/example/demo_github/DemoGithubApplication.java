@@ -1,4 +1,4 @@
-package com.example;  // Adapte à ton dossier
+package com.example;  // ← CHANGEMENT ICI
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,16 +6,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-public class DemoGithubApplication{
-    public static void main(String[] args) {
-        SpringApplication.run(DemogithubApplication.class, args);
-    }
-}
-
 @RestController
-class HelloWorldController
-    @GetMapping("/")
-    public String sayHello() {
+public class DemoGithubApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(DemoGithubApplication.class, args);
+    }
+
+    @GetMapping("/hello")
+    public String hello() {
         return "Hello, World!";
     }
 }
