@@ -1,4 +1,4 @@
-package com.example;  // Match <groupId>com.example</groupId>
+package com.example.demo_github;  // Adapte à ton dossier
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-public class DemoGithubApplication {  // Nom de classe = artifactId sans tirets
+public class DemoGithubApplication {  // ← ICI et dans main()
     public static void main(String[] args) {
-        SpringApplication.run(DemoGithubApplication.class, args);
+        SpringApplication.run(DemoGithubApplication.class, args);  // ← ICI
     }
 
     @GetMapping("/hello")
